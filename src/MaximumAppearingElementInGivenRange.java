@@ -18,7 +18,7 @@ public class MaximumAppearingElementInGivenRange {
             freq[i] += freq[i-1];
             if (freq[i]>freq[i-1]){
                 res = i;
-                if (freq[i]==n) return res;
+                if (freq[i]==n) return res; // If all the elements distinct for every range
             }
         }
         System.out.println(Arrays.toString(freq));

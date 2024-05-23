@@ -5,9 +5,9 @@ import java.util.List;
 public class MaximumSubArraySum {
 
     public static void main(String[] args) {
-        int[] a = {16 ,-1, 28, 24, 1, -30, 5 ,23 ,19};
+        int[] a = {16 ,-1, 28, -24, 1, -3, 5 ,-23 ,19};
         System.out.println(Arrays.toString(a));
-        System.out.println(maxSubArraySum(a,a.length));
+        System.out.println(maxCircularSubArraySum(a,a.length));
 //        System.out.println(maximum_subarrayContainAtMostOneSquare(a));
 //        System.out.println(minSubArraySum(a,a.length));
 //        System.out.println(maxCircularSubArraySum(a,a.length));
@@ -64,10 +64,11 @@ public class MaximumSubArraySum {
         for (int i = 0; i < n; i++) {
             totalArraySum += arr[i];
         }
+
+        int minSum = minSubArraySum(arr,n);
         System.out.println("max Sum : "+maxSum);
         System.out.println("Total Sum : "+totalArraySum);
-        int minSum = minSubArraySum(arr,n);
-
+        System.out.println("min Sum : "+minSum);
         return Math.max(totalArraySum-minSum,maxSum);
     }
 

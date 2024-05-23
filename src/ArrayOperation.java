@@ -17,7 +17,7 @@ class ArraysOperations{
         return CurrentSize+1;
     }
     public int delete(int[] arr, int n, int x) {//n=currentSize
-        int i = 0;
+        int i ;
         for(i = 0; i < n; i++)
         {
             if(arr[i] == x)
